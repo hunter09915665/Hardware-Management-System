@@ -4,44 +4,70 @@ import './Login.css'; // Assuming you have a CSS file for styling
 import { FaUser,FaLock } from "react-icons/fa";
 
 const Login = () => {
-    const [password, setPassword] = useState('');
+   const [role, setRole] = useState('Admin');
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Add login logic here
+    console.log('Logging in as:', role);
+  };
+
   return (
-    <div className='login-form'>
-        <form action="">
-            <h1>Login</h1>
-            <div className='input-box'>
-                
+    <div className="login-container">
+      <div className="left-panel">
+        <h1>Hardware<br />Management <br/>System</h1>
+        <p>Track your inventory with confidence.</p>
+        <img src="../Assets/logo.svg" alt="Warehouse" className="login-image" />
+      </div>
 
-                <input type='text' placeholder='Username' required />
-                 <FaUser className='icon'/>
+      <div className="right-panel">
+        <form className="login-form" onSubmit={handleLogin}>
+          <h2>Login</h2>
 
-            </div>
-            <div className='input-box'>
-                 
-                 
-                <input type='password' placeholder='Password' required value={password} onChange={e => setPassword(e.target.value)} />
-                {password === '' && <FaLock className='icon' />}
-              
+          <div className="input-box">
+            <FaUser />
+            <input type="text" placeholder="Username" required />
+          </div>
 
-            </div>
-            <div className='remember-forget'>
-                <label><input type='checkbox' />Remember Me</label>
-                <a href='#' >Forget Password ?</a>
+          <div className="input-box">
+            <FaLock />
+            <input
+              type={showPassword ? 'text' : 'password'}
+              placeholder="Password"
+              required
+            />
+            <span
+              className="toggle-password"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? '🙈' : '👁️'}
+            </span>
+          </div>
 
-            </div>
-            <button type='submit'>Login</button>
+          <div className="role-selector">
+            {['Admin', 'Manager', 'Cashier'].map((r) => (
+              <button
+                type="button"
+                key={r}
+                className={role === r ? 'active-role' : ''}
+                onClick={() => setRole(r)}
+              >
+                {r}
+              </button>
+            ))}
+          </div>
 
-            <div className='Register-link'>
-                <p>Don't have an account ? <a href='#'>Register</a></p>
+          <label className="remember-me">
+            <input type="checkbox" /> Remember me
+          </label>
 
-            </div>
-
-
+          <button type="submit" className="login-button">Log in</button>
+          <p className="forgot-password">Forgot password?</p>
         </form>
-
-      
+      </div>
     </div>
-  )
+  );
 }
 
 export default Login
