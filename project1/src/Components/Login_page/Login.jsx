@@ -14,11 +14,11 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
+   <div className="login-container">
       <div className="left-panel">
-        <h1>Hardware<br />Management <br/>System</h1>
+        <h1>Inventory<br />Management System</h1>
         <p>Track your inventory with confidence.</p>
-        <img src="../Assets/logo.svg" alt="Warehouse" className="login-image" />
+        <img src="/warehouse.png" alt="Warehouse" className="login-image" />
       </div>
 
       <div className="right-panel">
