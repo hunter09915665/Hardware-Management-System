@@ -6,9 +6,7 @@ import './Sidebar.css';
 const Sidebar = () => {
   return (
     <div className='main'>
-        <div className='brand-name'>
-          <span className='mtopic'>Hardware Management System</span>
-        </div>
+        
       
       <div className='sidebar'>
         <div className='sidebar-menu'>
