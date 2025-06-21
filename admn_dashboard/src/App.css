@@ -73,15 +73,25 @@
 }
 
 /* LIGHT THEME */
-.dashboard-layout.light {
-  background-color: #f1f1f1;
+.dashboard-layout.light .sidebar {
+  background-color: #fff;
   color: #333;
 }
 
+.dashboard-layout.light .sidebar-link {
+  color: #333;
+  background-color: #fff;
+}
+
+.dashboard-layout.light .sidebar-link.active,
+.dashboard-layout.light .sidebar-link:hover {
+  background-color: #e0e0e0;
+  color: #111;
+}
 .dashboard-layout.light .header,
 .dashboard-layout.light .sidebar,
 .dashboard-layout.light .main-content {
-  background-color: #fff;
+  background-color: #f3f5ef;
   color: #333;
 }
 
