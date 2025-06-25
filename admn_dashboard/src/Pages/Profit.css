@@ -1,0 +1,88 @@
+.pl-container {
+  padding: 1rem;
+  color: white;
+}
+
+.pl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.pl-select {
+  padding: 0.4rem;
+  border-radius: 4px;
+  color: black;
+}
+
+.pl-summary {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.revenue {
+  background-color: #065f46;
+}
+
+.cost {
+  background-color: #7f1d1d;
+}
+
+.profit {
+  background-color: #1e3a8a;
+}
+
+.pl-charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pl-log table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1f2937;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pl-log th,
+.pl-log td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #374151;
+  text-align: left;
+}
+
+.income {
+  color: #16a34a;
+}
+
+.expense {
+  color: #dc2626;
+}
+
+.pl-export {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.btn-export {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}

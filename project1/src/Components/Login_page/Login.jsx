@@ -16,7 +16,7 @@ const Login = () => {
   return (
    <div className="login-container">
       <div className="left-panel">
-        <h1>Inventory<br />Management System</h1>
+        <h1>Hardware<br />Management System</h1>
         <p>Track your inventory with confidence.</p>
         <img src="/warehouse.png" alt="Warehouse" className="login-image" />
       </div>
