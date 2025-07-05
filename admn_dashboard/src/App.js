@@ -19,6 +19,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 function App() {
+  const [collapsed, setCollapsed] = useState(false);
 
   //Load theme from localStorage (default to 'dark' if nothing saved)
 const [theme, setTheme] = useState(() => {
@@ -36,12 +37,12 @@ const [theme, setTheme] = useState(() => {
   return (
     <Router>
     
-    <div className={`dashboard-layout ${theme}`}>
-      <Sidebar />
-      <div className="right-panel">
+    <div className={`dashboard-layout ${theme}`} >
+      <Sidebar collapsed={collapsed} setCollapsed={setCollapsed}/>
+      <div className="right-panel" style={{ marginLeft: collapsed ? '70px' : '220px' }}>
         <Header onThemeToggle={toggleTheme} />
 
-        <div className="main-content">
+        <div className="main-content" >
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/users" element={<Users />} />

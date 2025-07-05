@@ -1,21 +1,25 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {  NavLink } from 'react-router-dom';
 
 import { HouseFill, BoxFill, PeopleFill, Receipt, GraphUp, Power, Speedometer2, MegaphoneFill, GraphUpArrow } from 'react-bootstrap-icons';
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ collapsed, setCollapsed }) => {
   return (
     
         
-      <div className='sidebar'>
+      <div className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
+        <div className='sidebar-header'> 
+           <h1 className='d-name'>{collapsed ? 'A' : 'Admin'} </h1>
+         <button className="toggle-btn" onClick={() => setCollapsed(!collapsed)}>☰</button>    
+       </div>
         <div className='sidebar-menu'>
-         <br></br> <h1 className='d-name'>Admin </h1><br></br>
-          <NavLink to="/" className="sidebar-link"><Speedometer2 className="me-2" />Dashboard</NavLink>
-          <NavLink to="/Users" className="sidebar-link"><PeopleFill className="me-2" />Users</NavLink>
-          <NavLink to="/profit-loss" className="sidebar-link"><GraphUpArrow className="me-2" />Profit & Loss</NavLink>
-          <NavLink to="/Promotions" className="sidebar-link"><MegaphoneFill className="me-2" />Promotions</NavLink>
-          <NavLink to="/Inventory" className="sidebar-link"><Receipt className="me-2" />Inventory Control</NavLink>
+         
+          <NavLink to="/" className="sidebar-link" title={collapsed ? "Dashboard" : ""}><Speedometer2 className="me-2" /> {!collapsed && "Dashboard"}</NavLink>
+          <NavLink to="/Users" className="sidebar-link" title={collapsed ? "Users" : ""}><PeopleFill className="me-2" />{!collapsed &&  <span className="link-text">Users</span>}</NavLink>
+          <NavLink to="/profit-loss" className="sidebar-link" title={collapsed ? "Profit-Loss" : ""}><GraphUpArrow className="me-2" />{!collapsed && "Profit & Loss"}</NavLink>
+          <NavLink to="/Promotions" className="sidebar-link" title={collapsed ? "Promotions" : ""}><MegaphoneFill className="me-2" />{!collapsed && "Promotions"}</NavLink>
+          <NavLink to="/Inventory" className="sidebar-link" title={collapsed ? "Inventory" : ""}><Receipt className="me-2" />{!collapsed && "Inventory Control"}</NavLink>
 
           
          
@@ -23,7 +27,7 @@ const Sidebar = () => {
 
       
         <div className="sidebar-footer">
-           <NavLink to="/logout" className="sidebar-logout"><Power className="me-2" />Logout</NavLink>
+           <NavLink to="/logout" className="sidebar-logout"><Power className="me-2" />{!collapsed && "Logout"}</NavLink>
 
         </div>
       </div>
