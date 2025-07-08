@@ -10,13 +10,11 @@ const Sidebar = () => {
         
       <div className='sidebar'>
         <div className='sidebar-menu'>
-         <br></br> <h1 className='d-name'>Admin </h1><br></br>
-          <NavLink to="/" className="sidebar-link"><Speedometer2 className="me-2" />Dashboard</NavLink>
-          <NavLink to="/Users" className="sidebar-link"><PeopleFill className="me-2" />Users</NavLink>
-          <NavLink to="/profit-loss" className="sidebar-link"><GraphUpArrow className="me-2" />Profit & Loss</NavLink>
-          <NavLink to="/Promotions" className="sidebar-link"><MegaphoneFill className="me-2" />Promotions</NavLink>
-          <NavLink to="/Inventory" className="sidebar-link"><Receipt className="me-2" />Inventory Control</NavLink>
-
+         <br></br> <h1 className='d-name'>cashier </h1><br></br>
+          <NavLink to="/" className="sidebar-link"><Speedometer2 className="me-2" />Billing</NavLink>
+          <NavLink to="/Users" className="sidebar-link"><PeopleFill className="me-2" />customer</NavLink>
+          <NavLink to="/profit-loss" className="sidebar-link"><GraphUpArrow className="me-2" /> Transactions</NavLink>
+          
           
          
         </div>
