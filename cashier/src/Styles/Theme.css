@@ -1,0 +1,49 @@
+
+/* LIGHT THEME */
+.app.light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.app.light .card,
+.app.light .debtors-section,
+.app.light .transactions-section {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* DARK THEME */
+
+.app.dark {
+  background-color: #1f1f2e;
+  color: #f1f1f1;
+}
+.app.dark .card,
+.app.dark .debtors-section,
+.app.dark .transactions-section {
+  background-color: #2d2d3a;
+  color: #f1f1f1;
+}
+
+.app.dark th,
+.app.dark td {
+  color: #f1f1f1 !important;
+}
+
+.app.dark .debtors-section {
+  background-color: #3a2b2b;
+  border: 1px solid #a36;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 10px 15px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}

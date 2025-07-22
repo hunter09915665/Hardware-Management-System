@@ -1,0 +1,40 @@
+.customer-container {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.customer-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.customer-form input, .customer-form select {
+  padding: 10px;
+  font-size: 16px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.customer-form button {
+  padding: 10px 15px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.customer-table th, .customer-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
